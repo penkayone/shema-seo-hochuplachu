@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Схема работ по SEO для ХочуПлачу: замер 28 сентября 2026, что изменилось в плане и порядок работ на три месяца.">
+<title>Схема работ ХочуПлачу</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    color-scheme: light;
+    --paper:#F6F7FB;
+    --card:#FFFFFF;
+    --card2:#FBFCFE;
+    --ink:#15171F;
+    --ink2:#3C4150;
+    --ink3:#767D91;
+    --line:#E2E6F0;
+    --line2:#EDF0F7;
+    --blue:#504CFF;
+    --blue-soft:#EEEDFF;
+    --purple:#7B44E0;
+    --purple-soft:#F3EDFF;
+    --green:#1F8A5B;
+    --green-soft:#E6F5EE;
+    --amber:#A56410;
+    --amber-soft:#FBF0E0;
+    --display:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --body:'Literata',Georgia,'Times New Roman',serif;
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    --shadow:0 1px 2px rgba(21,23,31,.04), 0 8px 24px -12px rgba(21,23,31,.10);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:17px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding-inline:24px}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink3)}
+
+  /* шапка */
+  header{background:linear-gradient(180deg,#FFFFFF 0%,var(--paper) 100%);border-bottom:1px solid var(--line)}
+  header .wrap{padding-block:64px 52px}
+  h1{font-family:var(--display);font-size:clamp(31px,4.6vw,48px);font-weight:500;line-height:1.1;
+     letter-spacing:-.02em;margin:16px 0 20px;max-width:18ch;text-wrap:balance;color:var(--ink)}
+  .lead{max-width:63ch;color:var(--ink2);font-size:18px}
+  .stamp{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .stamp span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink3);
+    background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+
+  section{padding-block:60px;border-top:1px solid var(--line2)}
+  section:first-of-type{border-top:0}
+  h2{font-family:var(--display);font-size:clamp(23px,2.8vw,30px);font-weight:500;letter-spacing:-.015em;
+     margin:0 0 8px;text-wrap:balance}
+  .sub{color:var(--ink3);max-width:66ch;margin:0 0 32px;font-size:16.5px}
+  h3{font-family:var(--display);font-weight:500;letter-spacing:-.01em}
+
+  /* схема: этапы */
+  .stages{display:grid;grid-template-columns:1fr 32px 1fr 32px 1fr 32px 1fr;align-items:stretch}
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 20px;box-shadow:var(--shadow)}
+  .stage .num{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+  .stage h3{font-size:17px;margin:8px 0 6px}
+  .stage p{margin:0;font-size:14.5px;line-height:1.55;color:var(--ink3)}
+  .stage.done{background:var(--green-soft);border-color:#C8E7D8}
+  .stage.done .num{color:var(--green)}
+  .stage.done p{color:#2F6B52}
+  .chev{display:flex;align-items:center;justify-content:center}
+  .chev svg{width:18px;height:18px;stroke:var(--ink3);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+  /* схема: месяцы */
+  .months{display:grid;grid-template-columns:1fr 36px 1fr 36px 1fr;align-items:start;margin-top:14px}
+  .month{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+  .month .head{padding:18px 20px 16px;border-bottom:1px solid var(--line2);background:var(--card2)}
+  .month .when{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+  .month h3{font-size:19px;margin:7px 0 6px}
+  .month .aim{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink3)}
+  .month ol{margin:0;padding:16px 20px 20px 38px;display:flex;flex-direction:column;gap:11px}
+  .month li{font-size:15px;line-height:1.5;color:var(--ink2)}
+  .month li::marker{font-family:var(--mono);font-size:12px;color:var(--ink3)}
+  .month.m2{border-color:#E0D3FA}
+  .month.m2 .head{background:var(--purple-soft)}
+  .month.m2 .when{color:var(--purple)}
+  .month.m3{border-color:#CCE7DB}
+  .month.m3 .head{background:var(--green-soft)}
+  .month.m3 .when{color:var(--green)}
+  .chev.tall{align-self:center;padding-block:40px}
+
+  /* схема: вход от клиента */
+  .feed{margin-top:14px;display:grid;grid-template-columns:1fr 36px 1fr 36px 1fr}
+  .feed .up{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .feed .up svg{width:18px;height:18px;stroke:var(--amber);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .feed .from{grid-column:1 / -1;margin-top:10px;background:var(--amber-soft);border:1px solid #F0DCBC;
+    border-radius:14px;padding:16px 20px}
+  .feed .from b{font-family:var(--display);font-weight:500;color:var(--amber);font-size:15px}
+  .feed .from p{margin:6px 0 0;font-size:15px;line-height:1.55;color:#6B4A18}
+  .hint{margin:12px 0 0;font-size:14.5px;color:var(--ink3);text-align:center}
+
+  /* цифры замера */
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+  .fact b{display:block;font-family:var(--display);font-size:27px;font-weight:500;letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums;line-height:1.15}
+  .fact span{display:block;color:var(--ink3);font-size:14px;line-height:1.45;margin-top:8px}
+  .fact.good b{color:var(--green)}
+  .fact.bad b{color:var(--amber)}
+
+  /* было и стало */
+  .shift{display:flex;flex-direction:column;gap:12px}
+  .row{display:grid;grid-template-columns:1fr 40px 1fr;background:var(--card);border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+  .cell{padding:18px 20px}
+  .cell.was{background:var(--card2)}
+  .cell .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink3);display:block;margin-bottom:8px}
+  .cell.now .tag{color:var(--blue)}
+  .cell p{margin:0;font-size:15.5px;line-height:1.6;color:var(--ink2)}
+  .cell.now p{color:var(--ink)}
+  .row .chev{background:var(--blue-soft);border-inline:1px solid var(--line2)}
+  .row .chev svg{stroke:var(--blue)}
+  .row.plus{grid-template-columns:40px 1fr}
+  .row.plus .chev{background:var(--green-soft);border-inline-start:0}
+  .row.plus .chev svg{stroke:var(--green)}
+  .row.plus .cell.now .tag{color:var(--green)}
+
+  /* карточки клиента */
+  .gate{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+  .card .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--amber);display:block;margin-bottom:8px}
+  .card p{margin:0;font-size:15.5px;line-height:1.6;color:var(--ink2)}
+
+  /* два списка */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px 24px;box-shadow:var(--shadow)}
+  .panel h3{font-size:17px;margin:0 0 14px}
+  .panel ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px}
+  .panel li{position:relative;padding-left:22px;font-size:15.5px;line-height:1.55;color:var(--ink2)}
+  .panel li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:2px;background:var(--blue)}
+  .panel.stop li::before{background:var(--line);border:1px solid #D3D8E6}
+
+  footer{border-top:1px solid var(--line);background:var(--card)}
+  footer .wrap{padding-block:36px 44px}
+  footer p{margin:0 0 10px;max-width:72ch;color:var(--ink3);font-size:15px;line-height:1.6}
+  footer b{color:var(--ink2);font-weight:600}
+
+  @media (max-width:960px){
+    .stages{grid-template-columns:1fr;gap:0}
+    .months{grid-template-columns:1fr}
+    .feed{grid-template-columns:1fr}
+    .feed .up{padding-block:10px}
+    .chev{padding-block:12px}
+    .chev.tall{padding-block:12px}
+    .chev svg{transform:rotate(90deg)}
+    .facts{grid-template-columns:repeat(2,1fr)}
+    .two{grid-template-columns:1fr}
+    .gate{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    body{font-size:16px}
+    .row{grid-template-columns:1fr}
+    .row .chev{border-inline:0;border-block:1px solid var(--line2);padding-block:8px}
+    .row.plus{grid-template-columns:1fr}
+    .facts{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">ХочуПлачу · SEO · агентство KOMETA</div>
+    <h1>Что делаем с сайтом и в каком порядке</h1>
+    <p class="lead">Схема собрана после полного обхода сайта 28 сентября 2026. Сначала схема целиком, ниже подробности по каждому блоку: цифры замера, что изменилось в плане после него и что нужно от вашей стороны.</p>
+    <div class="stamp">
+      <span>28 сентября 2026</span>
+      <span>обход 982 страниц</span>
+      <span>документ на сверку</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap">
+  <h2>Схема целиком</h2>
+  <p class="sub">Четыре этапа. Первый закрыт, мы на переходе ко второму: ждём решений по нескольким пунктам, чтобы начать работы.</p>
+
+  <div class="stages">
+    <div class="stage done">
+      <span class="num">Этап 1 · сделано</span>
+      <h3>Замер</h3>
+      <p>Обошли сайт целиком, разобрали конкурентов, сверили правила поисковых систем по первоисточникам.</p>
+    </div>
+    <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+    <div class="stage">
+      <span class="num">Этап 2 · сейчас</span>
+      <h3>Решения</h3>
+      <p>Что из старого плана снимаем, что добавляем, что решает клиент. Доступы и реквизиты.</p>
+    </div>
+    <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+    <div class="stage">
+      <span class="num">Этап 3 · три месяца</span>
+      <h3>Работы</h3>
+      <p>Месяц за месяцем: убрать помехи, занять свободные запросы, усилить то, что пошло.</p>
+    </div>
+    <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+    <div class="stage">
+      <span class="num">Этап 4 · ежемесячно</span>
+      <h3>Отчёт</h3>
+      <p>Восемь строк, у каждой один источник. Там, где данных нет, стоит пропуск с причиной.</p>
+    </div>
+  </div>
+
+  <div class="months">
+    <div class="month m1">
+      <div class="head">
+        <span class="when">Месяц 1 · октябрь</span>
+        <h3>Убрать то, что мешает</h3>
+        <p class="aim">Поиск видит сайт целиком и отличает его от приложения.</p>
+      </div>
+      <ol>
+        <li>Доступы и панели, отдельный ресурс на приложение, подключение Вебмастера.</li>
+        <li>Решение по приложению: 404 на несуществующие адреса, свой robots.txt, запрет индексации при необходимости.</li>
+        <li>Страницы доверия: контакты с реквизитами, о компании, отзывы. Плюс починить написание названия оператора.</li>
+        <li>Разметка вопросов на 43 страницах «где платить» и товарная разметка там же.</li>
+        <li>Индексация по разделам и спрос по страновым запросам, затем решение по каталогу из 583 страниц.</li>
+        <li>Блог: развести запросы между статьями, усилить сильные, дописать или убрать самые короткие, проставить ссылки на коммерческие страницы.</li>
+        <li>Заголовки: 93 длинных и 18 повторяющихся. Счётчик Метрики. Стартовый замер позиций.</li>
+      </ol>
+    </div>
+
+    <div class="chev tall"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+
+    <div class="month m2">
+      <div class="head">
+        <span class="when">Месяц 2 · ноябрь</span>
+        <h3>Занять то, что свободно</h3>
+        <p class="aim">Закрываем запросы, по которым у конкурентов страницы есть, а у нас нет.</p>
+      </div>
+      <ol>
+        <li>Ядро запросов с частотностью и закрепление за страницами.</li>
+        <li>Расширение раздела «где платить» по спросу, формат берём свой же, он лучший на сайте.</li>
+        <li>Первые страницы под страны для карт.</li>
+        <li>Страницы сравнения способов оплаты.</li>
+        <li>Внешние размещения: каталоги и мониторинги, где стоят конкуренты, плюс отзывы.</li>
+        <li>Работа с выдачей по названию сервиса и разведение с однофамильцем.</li>
+        <li>Авторство и подпись проверяющего на материалах.</li>
+      </ol>
+    </div>
+
+    <div class="chev tall"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+
+    <div class="month m3">
+      <div class="head">
+        <span class="when">Месяц 3 · декабрь</span>
+        <h3>Усиление</h3>
+        <p class="aim">Наращиваем то, что пошло, и показываем цифры за квартал.</p>
+      </div>
+      <ol>
+        <li>Материалы под всплески спроса по календарю событий.</li>
+        <li>Наращивание упоминаний бренда и работа с отзывами.</li>
+        <li>Обновление статей по машинной таблице признаков.</li>
+        <li>Полный отчёт по позициям, индексации и трафику.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="feed">
+    <div class="up"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></div>
+    <div></div><div></div><div></div><div></div>
+    <div class="from">
+      <b>Вход от клиента, он держит первый месяц</b>
+      <p>Доступы к панелям, счётчик Метрики, реквизиты для страниц доверия, телефон для карточки в 2ГИС и решение по каталогу. Подробности ниже, каждый пункт подписан тем, какую работу он держит.</p>
+    </div>
+  </div>
+  <p class="hint">Планы второго и третьего месяца уточним по цифрам первого. Сейчас это направления, порядок внутри них подвинется.</p>
+</section>
+
+<section class="wrap">
+  <h2>Что мы сделали за эти дни</h2>
+  <p class="sub">Обошли сайт своими скриптами, разобрали четырёх конкурентов и сверили правила поисковых систем и площадок по первоисточникам. Каждая цифра снята 28 сентября.</p>
+  <div class="facts">
+    <div class="fact"><b>982</b><span>страницы обошли, все отвечают кодом 200</span></div>
+    <div class="fact good"><b>56 из 56</b><span>цитат из правил сверили дословно</span></div>
+    <div class="fact good"><b>0,34 с</b><span>медиана ответа сервера, это быстро</span></div>
+    <div class="fact bad"><b>431 из 583</b><span>карточки сервисов короче 300 слов</span></div>
+    <div class="fact bad"><b>43 из 44</b><span>страниц «где платить» с вопросами без разметки</span></div>
+    <div class="fact bad"><b>9 614</b><span>ссылок ведут на приложение вместо сайта</span></div>
+    <div class="fact bad"><b>2 796</b><span>картинок без описания</span></div>
+    <div class="fact bad"><b>0</b><span>счётчиков Метрики на сайте</span></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Что поменялось в плане после замера</h2>
+  <p class="sub">Три задачи из августовского плана сняли, потому что замер показал другое. Четыре появились, раньше их в плане не было.</p>
+  <div class="shift">
+
+    <div class="row">
+      <div class="cell was"><span class="tag">было в плане</span><p>Вывести ссылки на все страницы сервисов, они считались потерянными для поиска.</p></div>
+      <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+      <div class="cell now"><span class="tag">после обхода</span><p>Потерянных страниц всего две, остальные достижимы за три клика. Задачу сняли, время уходит на содержание страниц.</p></div>
+    </div>
+
+    <div class="row">
+      <div class="cell was"><span class="tag">было в плане</span><p>Склеить дубли в блоге, статьи считались повторами друг друга.</p></div>
+      <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+      <div class="cell now"><span class="tag">после обхода</span><p>Дословных повторов нет. Пересекаются запросы: 44 адреса из 74 про оплату. Разводим запросы и усиливаем сильные статьи, склейка тут не поможет.</p></div>
+    </div>
+
+    <div class="row">
+      <div class="cell was"><span class="tag">было в плане</span><p>Добавить файл llms.txt, чтобы сайт попадал в ответы нейросетей.</p></div>
+      <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+      <div class="cell now"><span class="tag">после проверки</span><p>Google пишет прямо, что новых файлов и разметки для ответов нейросетей не требуется. Задачу сняли, работаем с обычной выдачей и упоминаниями.</p></div>
+    </div>
+
+    <div class="row plus">
+      <div class="chev"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
+      <div class="cell now"><span class="tag">появилось</span><p>Приложение отдаёт страницу по любому адресу, и на него ведут 9 614 ссылок. Поиск видит тысячи одинаковых страниц. Это первая задача разработке.</p></div>
+    </div>
+
+    <div class="row plus">
+      <div class="chev"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
+      <div class="cell now"><span class="tag">появилось</span><p>Страниц контактов, компании и отзывов на сайте нет, все адреса дают 404. Для финансовой темы это самая дешёвая и самая заметная дыра.</p></div>
+    </div>
+
+    <div class="row plus">
+      <div class="chev"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
+      <div class="cell now"><span class="tag">появилось</span><p>Решение по каталогу из 583 карточек. Google 7 сентября публично назвал такие разделы риском для доверия ко всему сайту, поэтому решение принимаем до вывода их в индекс.</p></div>
+    </div>
+
+    <div class="row plus">
+      <div class="chev"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
+      <div class="cell now"><span class="tag">уточнилось</span><p>Каталоги и отзовики ссылочного веса не дают, финансовые маркетплейсы берут только компании с лицензией ЦБ. Из размещений остаются 2ГИС, профильные каталоги и отзывы реальных клиентов.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Без чего первый месяц не сдвинется</h2>
+  <p class="sub">Шесть пунктов на стороне клиента. У каждого подписано, какую работу он держит.</p>
+  <div class="gate">
+    <div class="card"><span class="tag">держит пункты 1 и 7</span><p>Доступ в Яндекс Вебмастер, отдельный ресурс в Search Console на приложение и счётчик Метрики на сайт.</p></div>
+    <div class="card"><span class="tag">держит пункт 3</span><p>Реквизиты компании, адрес и контакты для страниц доверия. Плюс объяснение, почему название оператора написано подменёнными буквами.</p></div>
+    <div class="card"><span class="tag">держит пункт 5</span><p>Решение по каталогу из 583 карточек после того, как будут цифры по индексации и спросу.</p></div>
+    <div class="card"><span class="tag">держит размещения</span><p>Рабочий телефон для карточки в 2ГИС и человек, который отвечает на отзывы от лица сервиса. Без телефона финансовую компанию туда не берут.</p></div>
+    <div class="card"><span class="tag">для чистоты картины</span><p>Ответ, кто ставит размещения на чужих площадках и чья партнёрская ссылка ведёт на сервис вместо сайта.</p></div>
+    <div class="card"><span class="tag">на стороне разработки</span><p>Переадресация с www, иерархия заголовков без пропуска уровня, описания к картинкам и сохранение параметра запуска в боте.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Чем меряем и чего не делаем</h2>
+  <p class="sub">Индексацию и позиции мы пока не замеряли: для этого нужны панели вебмастера. Это первая цифра, которую снимем в первый день работ, и от неё считаем рост.</p>
+  <div class="two">
+    <div class="panel">
+      <h3>Отчёт раз в месяц, у каждой строки один источник</h3>
+      <ul>
+        <li>Показы и клики из Search Console, топ запросов и страниц.</li>
+        <li>Показы и позиции из Яндекс Вебмастера.</li>
+        <li>Страниц в карте сайта против числа в индексе по каждой системе.</li>
+        <li>Поисковый трафик из Метрики.</li>
+        <li>Переходы в бот по меткам.</li>
+        <li>Доля брендовых запросов: фильтр Search Console открыт всем подходящим сайтам с 11 марта 2026.</li>
+        <li>Видимость в ответах Алисы из раздела Вебмастера.</li>
+        <li>Позиции по десяти контрольным запросам.</li>
+      </ul>
+    </div>
+    <div class="panel stop">
+      <h3>Чего мы не делаем</h3>
+      <ul>
+        <li>Накрутка поведенческих факторов. У Яндекса это нарушение с прямым названием, и нарушителем считается ещё и тот, кто накрутку продаёт.</li>
+        <li>Массовая закупка ссылок на биржах. Яндекс называет это псевдооптимизацией, Google ловит и покупателя, и площадку.</li>
+        <li>Покупка упоминаний бренда. Google в мае 2026 приравнял её к покупке ссылок.</li>
+        <li>Файлы под нейросети. Google пишет, что они не требуются.</li>
+        <li>Обещания сроков выхода в топ. В отчёте будут позиции по каждому запросу.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Откуда цифры.</b> Все замеры сняты 28 сентября 2026 своими скриптами по открытым страницам сайта. Правила поисковых систем и площадок сверены дословно с их первоисточниками в тот же день. Что выведено рассуждением, в аудите названо предположением.</p>
+    <p>Подробности по каждому пункту лежат в документе «Аудит и план SEO от 28 сентября».</p>
+  </div>
+</footer>
+</body>
+</html>
