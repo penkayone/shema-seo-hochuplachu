@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Схема работ по SEO для ХочуПлачу: замер 28 сентября 2026, что изменилось в плане и порядок работ на три месяца.">
+<meta name="description" content="Схема работ по SEO для ХочуПлачу: данные Search Console, диагноз, план на три месяца и стратегии.">
 <title>Схема работ ХочуПлачу</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,147 +28,120 @@
     --green-soft:#E6F5EE;
     --amber:#A56410;
     --amber-soft:#FBF0E0;
+    --red:#B4342B;
+    --red-soft:#FBEBEA;
     --display:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     --body:'Literata',Georgia,'Times New Roman',serif;
     --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
     --shadow:0 1px 2px rgba(21,23,31,.04), 0 8px 24px -12px rgba(21,23,31,.10);
   }
   *{box-sizing:border-box}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--body);
-    font-size:17px;
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-  }
-  .wrap{max-width:1120px;margin:0 auto;padding-inline:24px}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+    font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:1140px;margin:0 auto;padding-inline:24px}
   .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink3)}
 
-  /* шапка */
   header{background:linear-gradient(180deg,#FFFFFF 0%,var(--paper) 100%);border-bottom:1px solid var(--line)}
-  header .wrap{padding-block:64px 52px}
+  header .wrap{padding-block:60px 48px}
   h1{font-family:var(--display);font-size:clamp(31px,4.6vw,48px);font-weight:500;line-height:1.1;
-     letter-spacing:-.02em;margin:16px 0 20px;max-width:18ch;text-wrap:balance;color:var(--ink)}
-  .lead{max-width:63ch;color:var(--ink2);font-size:18px}
-  .stamp{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+     letter-spacing:-.02em;margin:16px 0 20px;max-width:19ch;text-wrap:balance}
+  .lead{max-width:64ch;color:var(--ink2);font-size:18px}
+  .stamp{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
   .stamp span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink3);
     background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
 
-  section{padding-block:60px;border-top:1px solid var(--line2)}
-  section:first-of-type{border-top:0}
-  h2{font-family:var(--display);font-size:clamp(23px,2.8vw,30px);font-weight:500;letter-spacing:-.015em;
-     margin:0 0 8px;text-wrap:balance}
-  .sub{color:var(--ink3);max-width:66ch;margin:0 0 32px;font-size:16.5px}
+  section{padding-block:56px;border-top:1px solid var(--line2)}
+  h2{font-family:var(--display);font-size:clamp(23px,2.8vw,30px);font-weight:500;letter-spacing:-.015em;margin:0 0 8px;text-wrap:balance}
+  .sub{color:var(--ink3);max-width:68ch;margin:0 0 30px;font-size:16.5px}
   h3{font-family:var(--display);font-weight:500;letter-spacing:-.01em}
+  p{margin:0 0 14px}
+  .text{max-width:72ch}
+  .text p{color:var(--ink2)}
+  .text b{color:var(--ink);font-weight:600}
 
-  /* схема: этапы */
-  .stages{display:grid;grid-template-columns:1fr 32px 1fr 32px 1fr 32px 1fr;align-items:stretch}
-  .stage{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 20px;box-shadow:var(--shadow)}
-  .stage .num{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
-  .stage h3{font-size:17px;margin:8px 0 6px}
-  .stage p{margin:0;font-size:14.5px;line-height:1.55;color:var(--ink3)}
-  .stage.done{background:var(--green-soft);border-color:#C8E7D8}
-  .stage.done .num{color:var(--green)}
-  .stage.done p{color:#2F6B52}
+  /* СХЕМА */
+  .road{display:grid;grid-template-columns:1fr 30px 1fr 30px 1fr 30px 1fr 30px 1fr;align-items:stretch}
+  .node{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 17px 20px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .node .cap{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+  .node h3{font-size:17.5px;margin:8px 0 8px}
+  .node .why{font-size:14px;line-height:1.5;color:var(--ink3);margin:0 0 12px}
+  .node ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px}
+  .node li{font-size:13.5px;line-height:1.45;color:var(--ink2);padding-left:15px;position:relative;font-family:var(--display)}
+  .node li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+  .node.now{background:var(--green-soft);border-color:#C5E6D7}
+  .node.now .cap{color:var(--green)}
+  .node.now li::before{background:var(--green)}
+  .node.key{border-color:#B9B7FF;box-shadow:0 1px 2px rgba(80,76,255,.10), 0 14px 34px -16px rgba(80,76,255,.45)}
+  .node.key .head-band{margin:-18px -17px 14px;padding:10px 17px;background:var(--blue);border-radius:15px 15px 0 0}
+  .node.key .head-band span{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+  .node.m2{border-color:#E0D3FA}.node.m2 .cap{color:var(--purple)}.node.m2 li::before{background:var(--purple)}
+  .node.m3{border-color:#CCE7DB}.node.m3 .cap{color:var(--green)}.node.m3 li::before{background:var(--green)}
+  .node.goal{background:var(--card2);border-style:dashed}
+  .node.goal .cap{color:var(--ink3)}.node.goal li::before{background:var(--ink3)}
   .chev{display:flex;align-items:center;justify-content:center}
-  .chev svg{width:18px;height:18px;stroke:var(--ink3);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .chev svg{width:17px;height:17px;stroke:var(--ink3);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
-  /* схема: месяцы */
-  .months{display:grid;grid-template-columns:1fr 36px 1fr 36px 1fr;align-items:start;margin-top:14px}
-  .month{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
-  .month .head{padding:18px 20px 16px;border-bottom:1px solid var(--line2);background:var(--card2)}
-  .month .when{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
-  .month h3{font-size:19px;margin:7px 0 6px}
-  .month .aim{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink3)}
-  .month ol{margin:0;padding:16px 20px 20px 38px;display:flex;flex-direction:column;gap:11px}
-  .month li{font-size:15px;line-height:1.5;color:var(--ink2)}
-  .month li::marker{font-family:var(--mono);font-size:12px;color:var(--ink3)}
-  .month.m2{border-color:#E0D3FA}
-  .month.m2 .head{background:var(--purple-soft)}
-  .month.m2 .when{color:var(--purple)}
-  .month.m3{border-color:#CCE7DB}
-  .month.m3 .head{background:var(--green-soft)}
-  .month.m3 .when{color:var(--green)}
-  .chev.tall{align-self:center;padding-block:40px}
+  .feeds{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+  .feed{background:var(--amber-soft);border:1px solid #F0DCBC;border-radius:14px;padding:14px 16px}
+  .feed .up{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+  .feed .up svg{width:15px;height:15px;stroke:var(--amber);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  .feed .up b{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--amber);font-weight:500}
+  .feed p{margin:0;font-size:14.5px;line-height:1.5;color:#6B4A18}
+  .feed.done{background:var(--green-soft);border-color:#C5E6D7}
+  .feed.done .up svg{stroke:var(--green)}.feed.done .up b{color:var(--green)}.feed.done p{color:#2C6A50}
 
-  /* схема: вход от клиента */
-  .feed{margin-top:14px;display:grid;grid-template-columns:1fr 36px 1fr 36px 1fr}
-  .feed .up{display:flex;flex-direction:column;align-items:center;gap:8px}
-  .feed .up svg{width:18px;height:18px;stroke:var(--amber);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-  .feed .from{grid-column:1 / -1;margin-top:10px;background:var(--amber-soft);border:1px solid #F0DCBC;
-    border-radius:14px;padding:16px 20px}
-  .feed .from b{font-family:var(--display);font-weight:500;color:var(--amber);font-size:15px}
-  .feed .from p{margin:6px 0 0;font-size:15px;line-height:1.55;color:#6B4A18}
-  .hint{margin:12px 0 0;font-size:14.5px;color:var(--ink3);text-align:center}
-
-  /* цифры замера */
+  /* цифры */
   .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-  .fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
-  .fact b{display:block;font-family:var(--display);font-size:27px;font-weight:500;letter-spacing:-.02em;
-    font-variant-numeric:tabular-nums;line-height:1.15}
-  .fact span{display:block;color:var(--ink3);font-size:14px;line-height:1.45;margin-top:8px}
+  .fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:17px;box-shadow:var(--shadow)}
+  .fact b{display:block;font-family:var(--display);font-size:26px;font-weight:500;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.15}
+  .fact span{display:block;color:var(--ink3);font-size:13.5px;line-height:1.45;margin-top:7px}
   .fact.good b{color:var(--green)}
-  .fact.bad b{color:var(--amber)}
+  .fact.bad b{color:var(--red)}
 
-  /* было и стало */
-  .shift{display:flex;flex-direction:column;gap:12px}
-  .row{display:grid;grid-template-columns:1fr 40px 1fr;background:var(--card);border:1px solid var(--line);
-    border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
-  .cell{padding:18px 20px}
-  .cell.was{background:var(--card2)}
-  .cell .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--ink3);display:block;margin-bottom:8px}
-  .cell.now .tag{color:var(--blue)}
-  .cell p{margin:0;font-size:15.5px;line-height:1.6;color:var(--ink2)}
-  .cell.now p{color:var(--ink)}
-  .row .chev{background:var(--blue-soft);border-inline:1px solid var(--line2)}
-  .row .chev svg{stroke:var(--blue)}
-  .row.plus{grid-template-columns:40px 1fr}
-  .row.plus .chev{background:var(--green-soft);border-inline-start:0}
-  .row.plus .chev svg{stroke:var(--green)}
-  .row.plus .cell.now .tag{color:var(--green)}
+  /* диагноз */
+  .diag{background:var(--card);border:1px solid #B9B7FF;border-left:4px solid var(--blue);border-radius:14px;
+    padding:22px 24px;box-shadow:var(--shadow);max-width:80ch}
+  .diag .cap{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:8px}
+  .diag p{margin:0 0 12px;color:var(--ink2)}
+  .diag p:last-child{margin:0}
+  .diag b{color:var(--ink);font-weight:600}
 
-  /* карточки клиента */
-  .gate{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
-  .card .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
-    color:var(--amber);display:block;margin-bottom:8px}
-  .card p{margin:0;font-size:15.5px;line-height:1.6;color:var(--ink2)}
+  /* карточки в сетке */
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+  .box .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:8px}
+  .box h3{font-size:16.5px;margin:0 0 8px}
+  .box p{margin:0 0 10px;font-size:15.5px;line-height:1.6;color:var(--ink2)}
+  .box p:last-child{margin:0}
+  .box.blue .tag{color:var(--blue)} .box.blue{border-color:#CFCDFF}
+  .box.green .tag{color:var(--green)} .box.green{border-color:#C5E6D7}
+  .box.red .tag{color:var(--red)} .box.red{border-color:#F0CFCC}
 
-  /* два списка */
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px 24px;box-shadow:var(--shadow)}
-  .panel h3{font-size:17px;margin:0 0 14px}
-  .panel ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px}
-  .panel li{position:relative;padding-left:22px;font-size:15.5px;line-height:1.55;color:var(--ink2)}
-  .panel li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:2px;background:var(--blue)}
-  .panel.stop li::before{background:var(--line);border:1px solid #D3D8E6}
+  .later{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--purple);background:var(--purple-soft);border:1px solid #E0D3FA;border-radius:999px;padding:3px 9px;vertical-align:2px}
+
+  ul.plain{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+  ul.plain li{position:relative;padding-left:22px;font-size:15.5px;line-height:1.55;color:var(--ink2)}
+  ul.plain li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:2px;background:var(--blue)}
+  ul.plain.stop li::before{background:var(--line);border:1px solid #D3D8E6}
 
   footer{border-top:1px solid var(--line);background:var(--card)}
-  footer .wrap{padding-block:36px 44px}
-  footer p{margin:0 0 10px;max-width:72ch;color:var(--ink3);font-size:15px;line-height:1.6}
+  footer .wrap{padding-block:34px 42px}
+  footer p{margin:0 0 10px;max-width:74ch;color:var(--ink3);font-size:15px;line-height:1.6}
   footer b{color:var(--ink2);font-weight:600}
 
-  @media (max-width:960px){
-    .stages{grid-template-columns:1fr;gap:0}
-    .months{grid-template-columns:1fr}
-    .feed{grid-template-columns:1fr}
-    .feed .up{padding-block:10px}
-    .chev{padding-block:12px}
-    .chev.tall{padding-block:12px}
+  @media (max-width:1000px){
+    .road{grid-template-columns:1fr}
+    .chev{padding-block:10px}
     .chev svg{transform:rotate(90deg)}
+    .node.key .head-band{border-radius:15px 15px 0 0}
+    .feeds{grid-template-columns:1fr}
     .facts{grid-template-columns:repeat(2,1fr)}
-    .two{grid-template-columns:1fr}
-    .gate{grid-template-columns:1fr}
+    .grid2,.grid3{grid-template-columns:1fr}
   }
   @media (max-width:560px){
     body{font-size:16px}
-    .row{grid-template-columns:1fr}
-    .row .chev{border-inline:0;border-block:1px solid var(--line2);padding-block:8px}
-    .row.plus{grid-template-columns:1fr}
     .facts{grid-template-columns:1fr}
   }
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -178,10 +151,11 @@
 <header>
   <div class="wrap">
     <div class="eyebrow">ХочуПлачу · SEO · агентство KOMETA</div>
-    <h1>Что делаем с сайтом и в каком порядке</h1>
-    <p class="lead">Схема собрана после полного обхода сайта 28 сентября 2026. Сначала схема целиком, ниже подробности по каждому блоку: цифры замера, что изменилось в плане после него и что нужно от вашей стороны.</p>
+    <h1>Куда мы ведём сайт и что делаем в первый месяц</h1>
+    <p class="lead">Сверху схема: где мы сейчас, что делаем по месяцам и к чему идём. Под схемой разбор: что показали панели, куда движутся конкуренты, мой диагноз и стратегии, включая быстрые.</p>
     <div class="stamp">
       <span>28 сентября 2026</span>
+      <span>Search Console подключён</span>
       <span>обход 982 страниц</span>
       <span>документ на сверку</span>
     </div>
@@ -191,199 +165,275 @@
 <main>
 
 <section class="wrap">
-  <h2>Схема целиком</h2>
-  <p class="sub">Четыре этапа. Первый закрыт, мы на переходе ко второму: ждём решений по нескольким пунктам, чтобы начать работы.</p>
+  <h2>Схема: куда движемся</h2>
+  <p class="sub">Пять шагов слева направо. Внутри каждого написано, зачем он нужен и что конкретно делаем. Первый месяц выделен: именно он решает, будет ли рост дальше.</p>
 
-  <div class="stages">
-    <div class="stage done">
-      <span class="num">Этап 1 · сделано</span>
-      <h3>Замер</h3>
-      <p>Обошли сайт целиком, разобрали конкурентов, сверили правила поисковых систем по первоисточникам.</p>
-    </div>
-    <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-    <div class="stage">
-      <span class="num">Этап 2 · сейчас</span>
-      <h3>Решения</h3>
-      <p>Что из старого плана снимаем, что добавляем, что решает клиент. Доступы и реквизиты.</p>
-    </div>
-    <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-    <div class="stage">
-      <span class="num">Этап 3 · три месяца</span>
-      <h3>Работы</h3>
-      <p>Месяц за месяцем: убрать помехи, занять свободные запросы, усилить то, что пошло.</p>
-    </div>
-    <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-    <div class="stage">
-      <span class="num">Этап 4 · ежемесячно</span>
-      <h3>Отчёт</h3>
-      <p>Восемь строк, у каждой один источник. Там, где данных нет, стоит пропуск с причиной.</p>
-    </div>
-  </div>
+  <div class="road">
 
-  <div class="months">
-    <div class="month m1">
-      <div class="head">
-        <span class="when">Месяц 1 · октябрь</span>
-        <h3>Убрать то, что мешает</h3>
-        <p class="aim">Поиск видит сайт целиком и отличает его от приложения.</p>
-      </div>
-      <ol>
-        <li>Доступы и панели, отдельный ресурс на приложение, подключение Вебмастера.</li>
-        <li>Решение по приложению: 404 на несуществующие адреса, свой robots.txt, запрет индексации при необходимости.</li>
-        <li>Страницы доверия: контакты с реквизитами, о компании, отзывы. Плюс починить написание названия оператора.</li>
-        <li>Разметка вопросов на 43 страницах «где платить» и товарная разметка там же.</li>
-        <li>Индексация по разделам и спрос по страновым запросам, затем решение по каталогу из 583 страниц.</li>
-        <li>Блог: развести запросы между статьями, усилить сильные, дописать или убрать самые короткие, проставить ссылки на коммерческие страницы.</li>
-        <li>Заголовки: 93 длинных и 18 повторяющихся. Счётчик Метрики. Стартовый замер позиций.</li>
-      </ol>
-    </div>
-
-    <div class="chev tall"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-
-    <div class="month m2">
-      <div class="head">
-        <span class="when">Месяц 2 · ноябрь</span>
-        <h3>Занять то, что свободно</h3>
-        <p class="aim">Закрываем запросы, по которым у конкурентов страницы есть, а у нас нет.</p>
-      </div>
-      <ol>
-        <li>Ядро запросов с частотностью и закрепление за страницами.</li>
-        <li>Расширение раздела «где платить» по спросу, формат берём свой же, он лучший на сайте.</li>
-        <li>Первые страницы под страны для карт.</li>
-        <li>Страницы сравнения способов оплаты.</li>
-        <li>Внешние размещения: каталоги и мониторинги, где стоят конкуренты, плюс отзывы.</li>
-        <li>Работа с выдачей по названию сервиса и разведение с однофамильцем.</li>
-        <li>Авторство и подпись проверяющего на материалах.</li>
-      </ol>
-    </div>
-
-    <div class="chev tall"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-
-    <div class="month m3">
-      <div class="head">
-        <span class="when">Месяц 3 · декабрь</span>
-        <h3>Усиление</h3>
-        <p class="aim">Наращиваем то, что пошло, и показываем цифры за квартал.</p>
-      </div>
-      <ol>
-        <li>Материалы под всплески спроса по календарю событий.</li>
-        <li>Наращивание упоминаний бренда и работа с отзывами.</li>
-        <li>Обновление статей по машинной таблице признаков.</li>
-        <li>Полный отчёт по позициям, индексации и трафику.</li>
-      </ol>
-    </div>
-  </div>
-
-  <div class="feed">
-    <div class="up"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg></div>
-    <div></div><div></div><div></div><div></div>
-    <div class="from">
-      <b>Вход от клиента, он держит первый месяц</b>
-      <p>Доступы к панелям, счётчик Метрики, реквизиты для страниц доверия, телефон для карточки в 2ГИС и решение по каталогу. Подробности ниже, каждый пункт подписан тем, какую работу он держит.</p>
-    </div>
-  </div>
-  <p class="hint">Планы второго и третьего месяца уточним по цифрам первого. Сейчас это направления, порядок внутри них подвинется.</p>
-</section>
-
-<section class="wrap">
-  <h2>Что мы сделали за эти дни</h2>
-  <p class="sub">Обошли сайт своими скриптами, разобрали четырёх конкурентов и сверили правила поисковых систем и площадок по первоисточникам. Каждая цифра снята 28 сентября.</p>
-  <div class="facts">
-    <div class="fact"><b>982</b><span>страницы обошли, все отвечают кодом 200</span></div>
-    <div class="fact good"><b>56 из 56</b><span>цитат из правил сверили дословно</span></div>
-    <div class="fact good"><b>0,34 с</b><span>медиана ответа сервера, это быстро</span></div>
-    <div class="fact bad"><b>431 из 583</b><span>карточки сервисов короче 300 слов</span></div>
-    <div class="fact bad"><b>43 из 44</b><span>страниц «где платить» с вопросами без разметки</span></div>
-    <div class="fact bad"><b>9 614</b><span>ссылок ведут на приложение вместо сайта</span></div>
-    <div class="fact bad"><b>2 796</b><span>картинок без описания</span></div>
-    <div class="fact bad"><b>0</b><span>счётчиков Метрики на сайте</span></div>
-  </div>
-</section>
-
-<section class="wrap">
-  <h2>Что поменялось в плане после замера</h2>
-  <p class="sub">Три задачи из августовского плана сняли, потому что замер показал другое. Четыре появились, раньше их в плане не было.</p>
-  <div class="shift">
-
-    <div class="row">
-      <div class="cell was"><span class="tag">было в плане</span><p>Вывести ссылки на все страницы сервисов, они считались потерянными для поиска.</p></div>
-      <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-      <div class="cell now"><span class="tag">после обхода</span><p>Потерянных страниц всего две, остальные достижимы за три клика. Задачу сняли, время уходит на содержание страниц.</p></div>
-    </div>
-
-    <div class="row">
-      <div class="cell was"><span class="tag">было в плане</span><p>Склеить дубли в блоге, статьи считались повторами друг друга.</p></div>
-      <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-      <div class="cell now"><span class="tag">после обхода</span><p>Дословных повторов нет. Пересекаются запросы: 44 адреса из 74 про оплату. Разводим запросы и усиливаем сильные статьи, склейка тут не поможет.</p></div>
-    </div>
-
-    <div class="row">
-      <div class="cell was"><span class="tag">было в плане</span><p>Добавить файл llms.txt, чтобы сайт попадал в ответы нейросетей.</p></div>
-      <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-      <div class="cell now"><span class="tag">после проверки</span><p>Google пишет прямо, что новых файлов и разметки для ответов нейросетей не требуется. Задачу сняли, работаем с обычной выдачей и упоминаниями.</p></div>
-    </div>
-
-    <div class="row plus">
-      <div class="chev"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
-      <div class="cell now"><span class="tag">появилось</span><p>Приложение отдаёт страницу по любому адресу, и на него ведут 9 614 ссылок. Поиск видит тысячи одинаковых страниц. Это первая задача разработке.</p></div>
-    </div>
-
-    <div class="row plus">
-      <div class="chev"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
-      <div class="cell now"><span class="tag">появилось</span><p>Страниц контактов, компании и отзывов на сайте нет, все адреса дают 404. Для финансовой темы это самая дешёвая и самая заметная дыра.</p></div>
-    </div>
-
-    <div class="row plus">
-      <div class="chev"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
-      <div class="cell now"><span class="tag">появилось</span><p>Решение по каталогу из 583 карточек. Google 7 сентября публично назвал такие разделы риском для доверия ко всему сайту, поэтому решение принимаем до вывода их в индекс.</p></div>
-    </div>
-
-    <div class="row plus">
-      <div class="chev"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></div>
-      <div class="cell now"><span class="tag">уточнилось</span><p>Каталоги и отзовики ссылочного веса не дают, финансовые маркетплейсы берут только компании с лицензией ЦБ. Из размещений остаются 2ГИС, профильные каталоги и отзывы реальных клиентов.</p></div>
-    </div>
-
-  </div>
-</section>
-
-<section class="wrap">
-  <h2>Без чего первый месяц не сдвинется</h2>
-  <p class="sub">Шесть пунктов на стороне клиента. У каждого подписано, какую работу он держит.</p>
-  <div class="gate">
-    <div class="card"><span class="tag">держит пункты 1 и 7</span><p>Доступ в Яндекс Вебмастер, отдельный ресурс в Search Console на приложение и счётчик Метрики на сайт.</p></div>
-    <div class="card"><span class="tag">держит пункт 3</span><p>Реквизиты компании, адрес и контакты для страниц доверия. Плюс объяснение, почему название оператора написано подменёнными буквами.</p></div>
-    <div class="card"><span class="tag">держит пункт 5</span><p>Решение по каталогу из 583 карточек после того, как будут цифры по индексации и спросу.</p></div>
-    <div class="card"><span class="tag">держит размещения</span><p>Рабочий телефон для карточки в 2ГИС и человек, который отвечает на отзывы от лица сервиса. Без телефона финансовую компанию туда не берут.</p></div>
-    <div class="card"><span class="tag">для чистоты картины</span><p>Ответ, кто ставит размещения на чужих площадках и чья партнёрская ссылка ведёт на сервис вместо сайта.</p></div>
-    <div class="card"><span class="tag">на стороне разработки</span><p>Переадресация с www, иерархия заголовков без пропуска уровня, описания к картинкам и сохранение параметра запуска в боте.</p></div>
-  </div>
-</section>
-
-<section class="wrap">
-  <h2>Чем меряем и чего не делаем</h2>
-  <p class="sub">Индексацию и позиции мы пока не замеряли: для этого нужны панели вебмастера. Это первая цифра, которую снимем в первый день работ, и от неё считаем рост.</p>
-  <div class="two">
-    <div class="panel">
-      <h3>Отчёт раз в месяц, у каждой строки один источник</h3>
+    <div class="node now">
+      <span class="cap">Сейчас · замер сделан</span>
+      <h3>Где мы стоим</h3>
+      <p class="why">Панели подключены, цифры на руках. Спрос нас уже видит, но на четвёртой странице.</p>
       <ul>
-        <li>Показы и клики из Search Console, топ запросов и страниц.</li>
-        <li>Показы и позиции из Яндекс Вебмастера.</li>
-        <li>Страниц в карте сайта против числа в индексе по каждой системе.</li>
-        <li>Поисковый трафик из Метрики.</li>
-        <li>Переходы в бот по меткам.</li>
-        <li>Доля брендовых запросов: фильтр Search Console открыт всем подходящим сайтам с 11 марта 2026.</li>
-        <li>Видимость в ответах Алисы из раздела Вебмастера.</li>
-        <li>Позиции по десяти контрольным запросам.</li>
+        <li>765 кликов за три месяца, 425 из них по названию сервиса</li>
+        <li>4 400 показов по запросам про оплату и карты, кликов почти ноль</li>
+        <li>Средняя позиция по этим запросам от 39 до 44</li>
+        <li>В индексе 2 350 страниц при 982 в карте сайта</li>
       </ul>
     </div>
-    <div class="panel stop">
-      <h3>Чего мы не делаем</h3>
+
+    <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+
+    <div class="node key">
+      <div class="head-band"><span>Месяц 1 · главный шаг</span></div>
+      <span class="cap">Октябрь</span>
+      <h3>Убрать потолок</h3>
+      <p class="why">Пока приложение плодит копии, а страницы тонкие, поиск не поднимет сайт выше. Сначала снимаем это.</p>
       <ul>
-        <li>Накрутка поведенческих факторов. У Яндекса это нарушение с прямым названием, и нарушителем считается ещё и тот, кто накрутку продаёт.</li>
-        <li>Массовая закупка ссылок на биржах. Яндекс называет это псевдооптимизацией, Google ловит и покупателя, и площадку.</li>
-        <li>Покупка упоминаний бренда. Google в мае 2026 приравнял её к покупке ссылок.</li>
-        <li>Файлы под нейросети. Google пишет, что они не требуются.</li>
-        <li>Обещания сроков выхода в топ. В отчёте будут позиции по каждому запросу.</li>
+        <li>Развести сайт и приложение: 404 на несуществующие адреса, свой robots.txt, канонические адреса</li>
+        <li>Страницы доверия: контакты с реквизитами, о компании, отзывы</li>
+        <li>Разметка вопросов на 43 страницах «где платить»</li>
+        <li>Поднять 15 страниц, которые уже в показах, но сидят на четвёртой странице</li>
+        <li>Заголовки и описания: 93 длинных, 18 повторяющихся</li>
+        <li>Блог: развести запросы, связать статьи с коммерческими страницами</li>
+        <li>Решение по каталогу из 583 карточек</li>
+      </ul>
+    </div>
+
+    <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+
+    <div class="node m2">
+      <span class="cap">Месяц 2 · ноябрь</span>
+      <h3>Занять свободное</h3>
+      <p class="why">Список сервисов берём не из головы: Search Console показывает, по каким нас уже показывают.</p>
+      <ul>
+        <li>Страницы под сервисы, где спрос уже виден: Patreon, Gumroad, Gamma, Krea, Perplexity</li>
+        <li>Ядро запросов с частотностью и закрепление за страницами</li>
+        <li>Страницы сравнения способов оплаты</li>
+        <li>Первые страницы под страны для карт</li>
+        <li>Внешние размещения и отзывы</li>
+      </ul>
+    </div>
+
+    <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+
+    <div class="node m3">
+      <span class="cap">Месяц 3 · декабрь</span>
+      <h3>Усилить то, что пошло</h3>
+      <p class="why">К этому времени видно, какие страницы растут. Вкладываемся в них, остальное правим.</p>
+      <ul>
+        <li>Материалы под всплески спроса по календарю</li>
+        <li>Обновление статей по машинной таблице признаков</li>
+        <li>Упоминания бренда и работа с отзывами</li>
+        <li>Отчёт по позициям, индексации и трафику за квартал</li>
+      </ul>
+    </div>
+
+    <div class="chev"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+
+    <div class="node goal">
+      <span class="cap">Куда идём</span>
+      <h3>Цель квартала</h3>
+      <p class="why">Мера простая: сколько людей приходит из поиска по запросам, где нас ещё не знают по названию.</p>
+      <ul>
+        <li>Небрендовые клики растут кратно, сейчас их 340 за три месяца</li>
+        <li>Коммерческие страницы в первой десятке вместо четвёртой</li>
+        <li>Индекс чистый: копии приложения из него ушли</li>
+        <li>Человека из поиска встречает сайт, приложение остаётся для своих</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="feeds">
+    <div class="feed done">
+      <div class="up"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><b>закрыто 28 сентября</b></div>
+      <p>Доступ в Search Console получен, первые цифры сняты. Они и легли в эту схему.</p>
+    </div>
+    <div class="feed">
+      <div class="up"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg><b>держит первый месяц</b></div>
+      <p>Счётчик Метрики на сайт и сайт в Яндекс Вебмастере. Проверил сегодня: счётчиков в аккаунте нет, сайт в Вебмастере не добавлен. Пока их нет, Яндекс мы не видим вообще.</p>
+    </div>
+    <div class="feed">
+      <div class="up"><svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></svg><b>держит первый месяц</b></div>
+      <p>Реквизиты и контакты для страниц доверия, телефон для карточки в 2ГИС, решение разработки по приложению.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Что показали панели</h2>
+  <p class="sub">Search Console, домен целиком, три месяца по 25 сентября. Это первые честные цифры по проекту, раньше мы их не видели.</p>
+  <div class="facts">
+    <div class="fact"><b>765</b><span>кликов из Google за три месяца</span></div>
+    <div class="fact good"><b>425</b><span>из них по названию сервиса, позиция 1,8</span></div>
+    <div class="fact bad"><b>1 клик</b><span>на 2 310 показов по запросам со словом «оплатить»</span></div>
+    <div class="fact bad"><b>39-44</b><span>средняя позиция по коммерческим запросам</span></div>
+    <div class="fact bad"><b>2 350</b><span>страниц в индексе при 982 в карте сайта</span></div>
+    <div class="fact bad"><b>255</b><span>страниц отброшены как копии без канонического адреса</span></div>
+    <div class="fact bad"><b>156</b><span>кликов забрало приложение вместо сайта</span></div>
+    <div class="fact good"><b>739 из 765</b><span>кликов пришли за последние 28 дней, рост идёт</span></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Диагноз</h2>
+  <div class="diag">
+    <span class="cap">Моё мнение по цифрам выше</span>
+    <p><b>Сайт не в тени, он на четвёртой странице.</b> Google показывает нас по нужным запросам почти девять тысяч раз за три месяца. Люди не кликают, потому что на четвёртой странице не кликают никогда. Это другая болезнь, чем «нас не видно», и лечится она быстрее.</p>
+    <p><b>Бренд занят и работает.</b> По названию сервиса мы первые, шесть человек из десяти кликают. Значит вся точка роста в запросах, где человек нас ещё не знает.</p>
+    <p><b>Главный тормоз технический.</b> В индексе 2 350 страниц при 982 реальных, и 255 отброшены как копии. Это приложение: оно отвечает страницей на любой адрес. Поиск тратит силы на копии и хуже относится к сайту целиком. Пока это не разведено, любой новый текст работает вполсилы.</p>
+    <p><b>Приложение забирает клики у сайта.</b> 156 кликов ушли на него, причём по обычным запросам вроде «виртуальная карта для icloud». Человек попадает в приложение вместо страницы, где ему всё объясняют.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Что замерили и что уже сделали</h2>
+  <div class="text">
+    <p>Обошли все 982 страницы сайта своими скриптами и сняли по каждой заголовки, описания, разметку, картинки, ссылки и объём текста. Отдельно проверили, как сайт отвечает роботу, и как ведёт себя приложение.</p>
+    <p>Разобрали четырёх конкурентов целиком: «Плати в пути» 1 221 страница, «Плати по миру» 860, WantToPay 243, Wayment 18. У нас 982.</p>
+    <p>Сверили правила Google, Яндекса и восьми площадок по первоисточникам, дословно, 56 цитат из 56. Ни одного правила по памяти в документе нет.</p>
+    <p>Собрали аудит на 32 тысячи знаков и план на три месяца. Подключили Search Console и сняли первые цифры, они выше.</p>
+    <p><b>Чего пока нет.</b> Яндекса мы не видим: счётчика Метрики на сайте нет, сайт в Вебмастере не добавлен. Для российской аудитории это половина картины, и закрывается она за один день.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Куда движутся конкуренты</h2>
+  <div class="grid3">
+    <div class="box">
+      <span class="tag">масштаб</span>
+      <h3>Берут количеством страниц</h3>
+      <p>У «Плати по миру» 374 страницы под сервисы, 76 стран и 26 городов. У нас 44 страницы под сервисы. Каждую свою страницу они закрывают вопросами с разметкой, поэтому попадают в быстрые ответы.</p>
+    </div>
+    <div class="box">
+      <span class="tag">качество шаблона</span>
+      <h3>Шаблон у них тоже тонкий</h3>
+      <p>На массовой странице у лидера около 9 700 знаков, из них уникальны примерно 1 300. Разница с нами в том, что приоритетные страницы они доводят руками до 33 000 знаков. Шаблон у них работает за счёт выборочной доработки руками.</p>
+    </div>
+    <div class="box red">
+      <span class="tag">новый игрок</span>
+      <h3>В нишу зашёл крупный портал</h3>
+      <p>Банки.ру открыли раздел «Оплата зарубежных сервисов из России картой онлайн» и продают eSIM. У них домен, которому поиск верит годами. По общим запросам вроде «как оплатить подписку» обогнать их в лоб не выйдет.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Как их обогнать</h2>
+  <div class="text">
+    <p><b>В лоб по общим запросам не выйдет, и не нужно.</b> У крупного портала домен сильнее. Обгоняют такие сайты в двух местах: на узких запросах и на личном опыте.</p>
+    <p><b>Узкие запросы.</b> «Как оплатить Gumroad из России» человек ищет конкретно, и здесь выигрывает тот, у кого страница ровно про это, раздел на сто сервисов тут проигрывает. У нас уже есть показы по Patreon, Gumroad, Gamma, Krea, Perplexity: спрос сам показал, куда идти.</p>
+    <p><b>Личный опыт.</b> У портала нет своих скриншотов оплаты, у нас они могут быть. Google прямо называет ценным то, чего нет у других, а скриншот процесса подделать нельзя. Это же требование стоит в нашем методе статей.</p>
+    <p><b>Скорость.</b> Пока конкурент правит шаблон на 374 страницах, мы поднимаем 15 конкретных страниц, которые уже в показах. Это работа на недели, кварталы тут не нужны.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Куда движется ниша</h2>
+  <div class="text">
+    <p><b>Ответы нейросетей забирают клики у обычной выдачи.</b> По замеру на 700 тысячах запросов небрендовые запросы теряют около 20 процентов кликов там, где появился ответ нейросети. При этом брендовые запросы, наоборот, прибавляют почти 19 процентов. Вывод простой: чем больше людей знают название, тем меньше нам страшны эти изменения.</p>
+    <p><b>Попадание в ответы нейросетей сильнее всего связано с упоминаниями бренда в сети.</b> Ссылки связаны заметно слабее, объём текстов на сайте почти не связан. Это два замера Ahrefs: первый по 75 тысячам брендов в мае 2025, второй в декабре того же года. Сами авторы честно пишут, что связь не равна причине и что на обычную выдачу упоминания почти не влияют.</p>
+    <p><b>Финансовая тема стала самой тяжёлой для размещений.</b> В опросе полутора сотен специалистов по работе со СМИ финансы вышли на первое место по сложности получить публикацию, год назад были на шестом. Закладываем больше отказов и больше времени.</p>
+    <p><b>Отдельной оптимизации под нейросети не существует.</b> Google пишет это прямым текстом: новых файлов и разметки не требуется. Кто продаёт «оптимизацию под ИИ» отдельной услугой, продаёт воздух.</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Стратегии: куда я бы стрелял</h2>
+  <p class="sub">Три пути. Первый основной, второй быстрый, третий рискованный. Ниже честно, что каждый даёт и чем платим.</p>
+  <div class="grid3">
+    <div class="box blue">
+      <span class="tag">основная · месяц 1</span>
+      <h3>Поднять своё с четвёртой страницы</h3>
+      <p>Самый дешёвый рост в проекте. Страницы уже в индексе и уже в показах, им не хватает чистоты индекса, вопросов с разметкой, нормальных заголовков и своих скриншотов.</p>
+      <p><b>Что даёт:</b> первые сдвиги за недели, потому что новые страницы ждать не нужно.</p>
+      <p><b>Чем платим:</b> ничем, кроме работы. Риска нет.</p>
+    </div>
+    <div class="box green">
+      <span class="tag">быстрая · параллельно</span>
+      <h3>Чужие сильные площадки</h3>
+      <p>Статья на площадке, которой поиск верит, выходит в топ быстрее собственной страницы молодого сайта. Это наш основной инструмент по другим клиентам, механика отработана.</p>
+      <p><b>Что даёт:</b> место в выдаче по узким запросам за недели и упоминания бренда, которые нужны для ответов нейросетей.</p>
+      <p><b>Чем платим:</b> ссылка оттуда веса не передаёт, площадки ставят на неё запрет. Работает на переходы и на имя.</p>
+    </div>
+    <div class="box red">
+      <span class="tag">рискованная · решает клиент</span>
+      <h3>Вытягивать каталог из 583 карточек</h3>
+      <p>Соблазн понятный: страницы уже есть. Но 431 из них короче 300 слов, и Google 7 сентября прямо сказал, что такие разделы часто стоят доверия всему сайту, а возвращать его долго.</p>
+      <p><b>Что даёт:</b> охват, если у каждой карточки появятся свои данные.</p>
+      <p><b>Чем платим:</b> риском для сайта целиком. Поэтому сначала решение, потом вывод в индекс.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Быстрые приёмы, которые работают</h2>
+  <p class="sub">Собрано из разборов практиков, на которых мы ориентируемся: исследования Ahrefs и Semrush с открытой методикой, разборы Search Engine Land, отчёты по работе со СМИ и официальные ответы сотрудников Google. Всё проверяемо по ссылкам, всё легально.</p>
+  <div class="grid2">
+    <div class="box">
+      <span class="tag">приём 1</span>
+      <h3>Хвост «как оплатить X из России»</h3>
+      <p>Конкуренция низкая, намерение точное, человек готов платить прямо сейчас. Список сервисов берём из Search Console, там показы уже идут, гадать не приходится.</p>
+    </div>
+    <div class="box">
+      <span class="tag">приём 2</span>
+      <h3>Править старое вместо производства нового</h3>
+      <p>Самый недооценённый рычаг. У нас 8 240 небрендовых показов и 340 кликов: люди видят нас в выдаче и проходят мимо. Заголовок и первый абзац тут дают больше, чем новая статья.</p>
+    </div>
+    <div class="box">
+      <span class="tag">приём 3</span>
+      <h3>Забрать выдачу по своему названию целиком</h3>
+      <p>По названию сервиса рядом с нами стоят чужие рейтинги и однофамилец. Чем больше своих страниц и своих материалов в этой выдаче, тем меньше людей уходит к соседу на нашем же запросе.</p>
+    </div>
+    <div class="box">
+      <span class="tag">приём 4</span>
+      <h3>Свои скриншоты как доказательство</h3>
+      <p>То, чего нет ни у портала, ни у конкурентов. Скриншот процесса оплаты закрывает требование поиска про личный опыт и одновременно снимает страх у читателя.</p>
+    </div>
+  </div>
+  <p class="sub" style="margin-top:26px;margin-bottom:14px">Отдельно про приёмы, которыми в нише пользуются, а мы не станем. Называю прямо, чтобы это не выглядело нашей неосведомлённостью.</p>
+  <ul class="plain stop">
+    <li><b>Накрутка поведения в выдаче.</b> У Яндекса это нарушение с отдельным названием, и нарушителем считается ещё и тот, кто такую услугу продаёт. Снимают ограничения без сроков.</li>
+    <li><b>Закупка ссылок на биржах.</b> Яндекс называет это псевдооптимизацией прямо в своих правилах. Google с 2022 года ловит и покупателя, и площадку.</li>
+    <li><b>Покупка упоминаний бренда.</b> Новая мода, Google в мае 2026 приравнял её к покупке ссылок.</li>
+    <li><b>Аренда раздела на чужом сильном сайте под свои коммерческие страницы.</b> С 28 августа 2026 у Google это отдельное нарушение. Редакционная статья с упоминанием сервиса при этом разрешена, и именно так мы и работаем.</li>
+  </ul>
+</section>
+
+<section class="wrap">
+  <h2>Что дальше <span class="later">потом</span></h2>
+  <p class="sub">Это не первый квартал. Записываю, чтобы было видно направление и чтобы потом не выглядело импровизацией.</p>
+  <div class="grid3">
+    <div class="box"><span class="tag">потом</span><h3>Страны и города</h3><p>У конкурента 76 стран и 26 городов под карты. Заходим туда после того, как научимся выводить в топ отдельные страницы, и только с реальными данными на каждой.</p></div>
+    <div class="box"><span class="tag">потом</span><h3>eSIM отдельным направлением</h3><p>252 страницы уже есть, спрос сезонный и завязан на поездки. Отдельный календарь и отдельные страницы сравнения.</p></div>
+    <div class="box"><span class="tag">потом</span><h3>Видимость в ответах Алисы</h3><p>У Яндекса есть свой отчёт по этому в Вебмастере. Подключим, как только появится доступ, и начнём мерить.</p></div>
+    <div class="box"><span class="tag">потом</span><h3>Отзывы и каталоги</h3><p>Из площадок нам открыт 2ГИС и профильные каталоги. Финансовые маркетплейсы берут только компании с лицензией ЦБ, туда не идём.</p></div>
+    <div class="box"><span class="tag">потом</span><h3>Сравнения способов оплаты</h3><p>Запрос «через что платить» сильнее запроса «купить карту». Страницы сравнения ловят человека раньше, чем он выбрал способ.</p></div>
+    <div class="box"><span class="tag">потом</span><h3>Свой канал спроса</h3><p>Чем больше людей ищут название сервиса, тем устойчивее весь трафик. Это единственная защита от того, что нейросети забирают клики.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Чем меряем</h2>
+  <p class="sub">Отчёт раз в месяц, у каждой строки один источник. Где данных пока нет, в отчёте стоит пропуск с причиной.</p>
+  <div class="grid2">
+    <div class="box">
+      <span class="tag">уже считается</span>
+      <ul class="plain">
+        <li>Клики и показы из Search Console, отдельно бренд и всё остальное.</li>
+        <li>Средняя позиция по коммерческим запросам, сейчас от 39 до 44.</li>
+        <li>Страниц в индексе против числа в карте сайта.</li>
+        <li>Причины, по которым страницы не попали в индекс.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <span class="tag">появится с доступами</span>
+      <ul class="plain">
+        <li>Показы и позиции из Яндекс Вебмастера.</li>
+        <li>Поисковый трафик и поведение из Метрики.</li>
+        <li>Переходы в бот по меткам.</li>
+        <li>Видимость сайта в ответах Алисы.</li>
       </ul>
     </div>
   </div>
@@ -393,7 +443,7 @@
 
 <footer>
   <div class="wrap">
-    <p><b>Откуда цифры.</b> Все замеры сняты 28 сентября 2026 своими скриптами по открытым страницам сайта. Правила поисковых систем и площадок сверены дословно с их первоисточниками в тот же день. Что выведено рассуждением, в аудите названо предположением.</p>
+    <p><b>Откуда цифры.</b> Данные Google взяты из Search Console по домену целиком за 90 дней по 25 сентября 2026. Замеры по страницам сняты 28 сентября своими скриптами. Правила поисковых систем и площадок сверены дословно с первоисточниками в тот же день. Где написано «моё мнение», это вывод, замером я его не называю.</p>
     <p>Подробности по каждому пункту лежат в документе «Аудит и план SEO от 28 сентября».</p>
   </div>
 </footer>
