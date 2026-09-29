@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Порядок работ по SEO для ХочуПлачу: три дорожки, зависимости и точки замера.">
+<title>Порядок работ ХочуПлачу</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    color-scheme: light;
+    --paper:#F6F7FB; --card:#FFFFFF; --card2:#FBFCFE;
+    --ink:#15171F; --ink2:#3C4150; --ink3:#767D91;
+    --line:#E2E6F0; --line2:#EDF0F7;
+    --blue:#504CFF; --blue-soft:#EEEDFF;
+    --purple:#7B44E0; --purple-soft:#F3EDFF;
+    --green:#1F8A5B; --green-soft:#E6F5EE;
+    --amber:#A56410; --amber-soft:#FBF0E0;
+    --red:#B4342B;
+    --display:'Jost',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --body:'Literata',Georgia,'Times New Roman',serif;
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    --shadow:0 1px 2px rgba(21,23,31,.04), 0 8px 24px -12px rgba(21,23,31,.10);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:1180px;margin:0 auto;padding-inline:24px}
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink3)}
+
+  header{background:linear-gradient(180deg,#FFFFFF 0%,var(--paper) 100%);border-bottom:1px solid var(--line)}
+  header .wrap{padding-block:56px 44px}
+  h1{font-family:var(--display);font-size:clamp(30px,4.4vw,46px);font-weight:500;line-height:1.1;
+     letter-spacing:-.02em;margin:14px 0 16px;max-width:20ch;text-wrap:balance}
+  .lead{max-width:62ch;color:var(--ink2);font-size:18px;margin:0}
+  .stamp{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+  .stamp span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink3);
+    background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+
+  section{padding-block:52px;border-top:1px solid var(--line2)}
+  h2{font-family:var(--display);font-size:clamp(22px,2.7vw,29px);font-weight:500;letter-spacing:-.015em;margin:0 0 8px;text-wrap:balance}
+  .sub{color:var(--ink3);max-width:70ch;margin:0 0 26px;font-size:16px}
+  h3{font-family:var(--display);font-weight:500;letter-spacing:-.01em}
+  p{margin:0 0 12px}
+
+  .flowbox{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:10px;box-shadow:var(--shadow)}
+  .flowbox svg{display:block;min-width:900px}
+  .legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:14px;font-family:var(--display);font-size:14px;color:var(--ink3)}
+  .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:7px;vertical-align:-1px}
+
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+  .fact b{display:block;font-family:var(--display);font-size:25px;font-weight:500;letter-spacing:-.02em;
+    font-variant-numeric:tabular-nums;line-height:1.15}
+  .fact span{display:block;color:var(--ink3);font-size:13.5px;line-height:1.45;margin-top:7px}
+  .fact.good b{color:var(--green)} .fact.bad b{color:var(--red)}
+
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+  .box .tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:8px}
+  .box h3{font-size:16.5px;margin:0 0 8px}
+  .box p{margin:0 0 9px;font-size:15.5px;line-height:1.55;color:var(--ink2)}
+  .box p:last-child{margin:0}
+  .box b{color:var(--ink);font-weight:600}
+  .box.blue{border-color:#CFCDFF} .box.blue .tag{color:var(--blue)}
+  .box.green{border-color:#C5E6D7} .box.green .tag{color:var(--green)}
+  .box.red{border-color:#F0CFCC} .box.red .tag{color:var(--red)}
+  .box.amber{border-color:#EBC98F;background:var(--amber-soft)} .box.amber .tag{color:var(--amber)}
+  .box.amber p{color:#6B4A18}
+
+  .diag{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .d{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
+  .d h3{font-size:16px;margin:0 0 6px}
+  .d p{margin:0;font-size:15.5px;line-height:1.55;color:var(--ink2)}
+  .d.ok{border-left-color:var(--green)}
+  .d.bad{border-left-color:var(--red)}
+
+  table.tr{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;box-shadow:var(--shadow);font-family:var(--display);font-size:15px}
+  table.tr th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);
+    text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);font-weight:500;background:var(--card2)}
+  table.tr td{padding:12px 16px;border-bottom:1px solid var(--line2);color:var(--ink2);vertical-align:top}
+  table.tr tr:last-child td{border-bottom:0}
+  table.tr td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+  table.tr td.now{color:var(--red)} table.tr td.next{color:var(--green);font-weight:500}
+
+  ul.plain{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px}
+  ul.plain li{position:relative;padding-left:21px;font-size:15.5px;line-height:1.5;color:var(--ink2)}
+  ul.plain li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--blue)}
+  ul.plain.stop li::before{background:var(--line);border:1px solid #D3D8E6}
+  ul.plain b{color:var(--ink);font-weight:600}
+
+  .later{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--purple);background:var(--purple-soft);border:1px solid #E0D3FA;border-radius:999px;padding:3px 9px;vertical-align:3px}
+
+  footer{border-top:1px solid var(--line);background:var(--card)}
+  footer .wrap{padding-block:30px 38px}
+  footer p{margin:0 0 9px;max-width:76ch;color:var(--ink3);font-size:14.5px;line-height:1.55}
+  footer b{color:var(--ink2);font-weight:600}
+
+  @media (max-width:1000px){
+    .facts{grid-template-columns:repeat(2,1fr)}
+    .grid2,.grid3,.diag{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    body{font-size:16px}
+    .facts{grid-template-columns:1fr}
+    table.tr{font-size:14px}
+    table.tr th,table.tr td{padding:10px 12px}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">ХочуПлачу · порядок работ по SEO · 29 сентября 2026</div>
+    <h1>Что за чем идёт и что делать, пока ждём</h1>
+    <p class="lead">Работа идёт тремя дорожками сразу. Первая зависит только от нас и не останавливается никогда. Вторая уходит разработке партиями. Третья ждёт ответов клиента. Стрелки показывают, что от чего открывается.</p>
+    <div class="stamp"><span>29 сентября 2026</span><span>105 пунктов плана</span><span>три дорожки</span></div>
+  </div>
+</header>
+
+<main>
+<section class="wrap">
+  <h2>Карта порядка</h2>
+  <p class="sub">Белые блоки делаем мы, фиолетовые разработка, жёлтые ждут клиента, синие это результат, который можно померить.</p>
+  <div class="flowbox"><svg viewBox="0 0 1240 962" width="100%" preserveAspectRatio="xMidYMin meet" role="img" aria-label="Карта порядка работ" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8C93A6"/></marker></defs>
+<style>.nt{font-family:Jost,sans-serif;font-size:14px;font-weight:500}.nb{font-family:Jost,sans-serif;font-size:12.5px;fill:#5B6275}.lt{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.09em;text-transform:uppercase;fill:#767D91}.ln{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.06em;fill:#A2A8B8}</style>
+<rect x="12" y="814" width="1216" height="130" rx="16" fill="#FBFCFE" stroke="#E2E6F0" stroke-dasharray="5 5"/>
+<text x="24" y="835" class="lt">Ноябрь · когда октябрь закрыт</text>
+<text x="1216" y="835" class="ln" text-anchor="end">открывается после дорожек 1 и 2</text>
+<rect x="12" y="676" width="1216" height="130" rx="16" fill="#FBFCFE" stroke="#EBC98F" stroke-dasharray="5 5"/>
+<text x="24" y="697" class="lt">Дорожка 3 · клиент через Яна</text>
+<text x="1216" y="697" class="ln" text-anchor="end">пока ждём, работает дорожка 1</text>
+<rect x="12" y="434" width="1216" height="234" rx="16" fill="#FBFCFE" stroke="#D3BEF5" stroke-dasharray="5 5"/>
+<text x="24" y="455" class="lt">Дорожка 2 · разработка, отдаём партиями</text>
+<text x="1216" y="455" class="ln" text-anchor="end">фиолетовое делает Александр</text>
+<rect x="12" y="162" width="1216" height="264" rx="16" fill="#FBFCFE" stroke="#CFCDFF" stroke-dasharray="5 5"/>
+<text x="24" y="183" class="lt">Дорожка 1 · наша работа, не ждёт никого</text>
+<text x="1216" y="183" class="ln" text-anchor="end">идёт непрерывно</text>
+<rect x="12" y="24" width="1216" height="130" rx="16" fill="#FBFCFE" stroke="#C5E6D7" stroke-dasharray="5 5"/>
+<text x="24" y="45" class="lt">29 сентября · точка старта</text>
+<text x="1216" y="45" class="ln" text-anchor="end">дальше работа идёт тремя дорожками</text>
+<rect x="24.0" y="60" width="384.0" height="82" rx="12" fill="#E6F5EE" stroke="#9FD3BB" stroke-width="1.5"/>
+<text x="37.0" y="87" class="nt" fill="#1F6A4C">Сделано сегодня</text>
+<text x="37.0" y="109" class="nb">Обход 985 страниц, цифры Search Console, разбор выдачи,</text>
+<text x="37.0" y="124" class="nb">план на 105 пунктов</text>
+<rect x="428.0" y="60" width="384.0" height="82" rx="12" fill="#F3EDFF" stroke="#D3BEF5" stroke-width="1.5"/>
+<text x="441.0" y="87" class="nt" fill="#5A31A8">Отдано разработке</text>
+<text x="441.0" y="109" class="nb">Партия 1: приложение, переадресация с www, счётчик</text>
+<text x="441.0" y="124" class="nb">Метрики</text>
+<rect x="832.0" y="60" width="384.0" height="82" rx="12" fill="#FBF0E0" stroke="#EBC98F" stroke-width="1.5"/>
+<text x="845.0" y="87" class="nt" fill="#8A5410">Ушло клиенту</text>
+<text x="845.0" y="109" class="nb">Реквизиты, один адрес бота, решение по каталогу из 585</text>
+<text x="845.0" y="124" class="nb">карточек</text>
+<path d="M620.0 146 L620.0 184" stroke="#504CFF" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<rect x="24.0" y="198" width="283.0" height="97" rx="12" fill="#FFFFFF" stroke="#D8DDEA" stroke-width="1.5"/>
+<text x="37.0" y="225" class="nt" fill="#15171F">1. Пакеты правок 1-3</text>
+<text x="37.0" y="247" class="nb">Patreon готов, Gamma и Google Play делаю</text>
+<text x="37.0" y="262" class="nb">сегодня. Заголовок, вопросы текстом, что</text>
+<text x="37.0" y="277" class="nb">дописать, скриншоты</text>
+<rect x="327.0" y="198" width="283.0" height="97" rx="12" fill="#FFFFFF" stroke="#D8DDEA" stroke-width="1.5"/>
+<text x="340.0" y="225" class="nt" fill="#15171F">2. Пакеты правок 4-6</text>
+<text x="340.0" y="247" class="nb">Facebook Ads, Krea, Gemini. Позиции</text>
+<text x="340.0" y="262" class="nb">35-42</text>
+<rect x="630.0" y="198" width="283.0" height="97" rx="12" fill="#FFFFFF" stroke="#D8DDEA" stroke-width="1.5"/>
+<text x="643.0" y="225" class="nt" fill="#15171F">3. Пакеты правок 7-15</text>
+<text x="643.0" y="247" class="nb">Оставшиеся девять страниц по убыванию</text>
+<text x="643.0" y="262" class="nb">позиции</text>
+<rect x="933.0" y="198" width="283.0" height="97" rx="12" fill="#EEEDFF" stroke="#B9B7FF" stroke-width="1.5"/>
+<text x="946.0" y="225" class="nt" fill="#3A37C9">4. Замер 31 октября</text>
+<text x="946.0" y="247" class="nb">Позиции по тем же пятнадцати адресам</text>
+<text x="946.0" y="262" class="nb">против стартовых 23-78</text>
+<path d="M307.0 246.5 L307.0 246.5 L321.0 246.5 L321.0 246.5" stroke="#504CFF" stroke-width="1.8" fill="none" marker-end="url(#ah)" stroke-linejoin="round"/>
+<path d="M610.0 246.5 L610.0 246.5 L624.0 246.5 L624.0 246.5" stroke="#504CFF" stroke-width="1.8" fill="none" marker-end="url(#ah)" stroke-linejoin="round"/>
+<path d="M913.0 246.5 L913.0 246.5 L927.0 246.5 L927.0 246.5" stroke="#504CFF" stroke-width="1.8" fill="none" marker-end="url(#ah)" stroke-linejoin="round"/>
+<rect x="24.0" y="317" width="283.0" height="97" rx="12" fill="#FFFFFF" stroke="#D8DDEA" stroke-width="1.5"/>
+<text x="37.0" y="344" class="nt" fill="#15171F">Развести пары страниц</text>
+<text x="37.0" y="366" class="nb">По шести сервисам у нас показываются и</text>
+<text x="37.0" y="381" class="nb">статья, и страница сервиса. Решаем,</text>
+<text x="37.0" y="396" class="nb">какая главная</text>
+<rect x="327.0" y="317" width="283.0" height="97" rx="12" fill="#FFFFFF" stroke="#D8DDEA" stroke-width="1.5"/>
+<text x="340.0" y="344" class="nt" fill="#15171F">Заголовки и описания</text>
+<text x="340.0" y="366" class="nb">93 длинных и 18 повторяющихся. Тексты</text>
+<text x="340.0" y="381" class="nb">готовим мы, вставляет разработка</text>
+<rect x="630.0" y="317" width="283.0" height="97" rx="12" fill="#FFFFFF" stroke="#D8DDEA" stroke-width="1.5"/>
+<text x="643.0" y="344" class="nt" fill="#15171F">Блог: развести запросы</text>
+<text x="643.0" y="366" class="nb">44 адреса из 74 про оплату. Составляем</text>
+<text x="643.0" y="381" class="nb">карту, какой статье какой запрос</text>
+<rect x="933.0" y="317" width="283.0" height="97" rx="12" fill="#FFFFFF" stroke="#D8DDEA" stroke-width="1.5"/>
+<text x="946.0" y="344" class="nt" fill="#15171F">Карта переходов</text>
+<text x="946.0" y="366" class="nb">Из какой статьи на какую страницу ведём</text>
+<text x="946.0" y="381" class="nb">человека. Бонус из предложения</text>
+<rect x="24.0" y="470" width="283.0" height="82" rx="12" fill="#F3EDFF" stroke="#D3BEF5" stroke-width="1.5"/>
+<text x="37.0" y="497" class="nt" fill="#5A31A8">Партия 1 · отдана</text>
+<text x="37.0" y="519" class="nb">Приложение, www, счётчик Метрики</text>
+<rect x="327.0" y="470" width="283.0" height="82" rx="12" fill="#F3EDFF" stroke="#D3BEF5" stroke-width="1.5"/>
+<text x="340.0" y="497" class="nt" fill="#5A31A8">Партия 2 · завтра</text>
+<text x="340.0" y="519" class="nb">Вставить пакеты правок по трём страницам</text>
+<rect x="630.0" y="470" width="283.0" height="82" rx="12" fill="#F3EDFF" stroke="#D3BEF5" stroke-width="1.5"/>
+<text x="643.0" y="497" class="nt" fill="#5A31A8">Партия 3 · середина октября</text>
+<text x="643.0" y="519" class="nb">Вёрстка, битые ссылки, дубли адресов,</text>
+<text x="643.0" y="534" class="nb">убрать legal из карты сайта</text>
+<rect x="933.0" y="470" width="283.0" height="82" rx="12" fill="#F3EDFF" stroke="#D3BEF5" stroke-width="1.5"/>
+<text x="946.0" y="497" class="nt" fill="#5A31A8">Партия 4 · по готовности статей</text>
+<text x="946.0" y="519" class="nb">Метка запуска в боте и мини-приложении</text>
+<rect x="240.0" y="574" width="370.0" height="82" rx="12" fill="#EEEDFF" stroke="#B9B7FF" stroke-width="1.5"/>
+<text x="253.0" y="601" class="nt" fill="#3A37C9">Результат: индекс</text>
+<text x="253.0" y="623" class="nb">Через 2-4 недели после партии 1 из индекса уходят 255</text>
+<text x="253.0" y="638" class="nb">копий, 2 350 идут к тысяче</text>
+<rect x="630.0" y="574" width="370.0" height="82" rx="12" fill="#EEEDFF" stroke="#B9B7FF" stroke-width="1.5"/>
+<text x="643.0" y="601" class="nt" fill="#3A37C9">Результат: позиции</text>
+<text x="643.0" y="623" class="nb">Через 2-4 недели после партии 2 три страницы двигаются</text>
+<text x="643.0" y="638" class="nb">с 23-28 вверх</text>
+<path d="M165.5 552 L165.5 564 L18 564 L18 561 L425.0 561 L425.0 574" stroke="#7B44E0" stroke-width="1.7" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M468.5 552 L468.5 564 L1222 564 L1222 561 L815.0 561 L815.0 574" stroke="#7B44E0" stroke-width="1.7" fill="none" stroke-dasharray="5 4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="24.0" y="712" width="283.0" height="82" rx="12" fill="#FBF0E0" stroke="#EBC98F" stroke-width="1.5"/>
+<text x="37.0" y="739" class="nt" fill="#8A5410">Реквизиты и контакты</text>
+<text x="37.0" y="761" class="nb">Открывает страницы доверия: контакты, о</text>
+<text x="37.0" y="776" class="nb">компании, отзывы</text>
+<rect x="327.0" y="712" width="283.0" height="82" rx="12" fill="#FBF0E0" stroke="#EBC98F" stroke-width="1.5"/>
+<text x="340.0" y="739" class="nt" fill="#8A5410">Один адрес бота</text>
+<text x="340.0" y="761" class="nb">Открывает единую ссылку в статьях и счёт</text>
+<text x="340.0" y="776" class="nb">переходов</text>
+<rect x="630.0" y="712" width="283.0" height="82" rx="12" fill="#FBF0E0" stroke="#EBC98F" stroke-width="1.5"/>
+<text x="643.0" y="739" class="nt" fill="#8A5410">Решение по каталогу</text>
+<text x="643.0" y="761" class="nb">Открывает сегментацию карты сайта и</text>
+<text x="643.0" y="776" class="nb">работу с 585 карточками</text>
+<rect x="933.0" y="712" width="283.0" height="82" rx="12" fill="#FBF0E0" stroke="#EBC98F" stroke-width="1.5"/>
+<text x="946.0" y="739" class="nt" fill="#8A5410">Телефон для 2ГИС</text>
+<text x="946.0" y="761" class="nb">Открывает карточку в справочнике и сбор</text>
+<text x="946.0" y="776" class="nb">отзывов</text>
+<path d="M620.0 798 L620.0 836" stroke="#504CFF" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<rect x="24.0" y="850" width="283.0" height="82" rx="12" fill="#FFFFFF" stroke="#D8DDEA" stroke-width="1.5"/>
+<text x="37.0" y="877" class="nt" fill="#15171F">Ядро запросов</text>
+<text x="37.0" y="899" class="nb">Частотность и закрепление запроса за</text>
+<text x="37.0" y="914" class="nb">одной страницей</text>
+<rect x="327.0" y="850" width="283.0" height="82" rx="12" fill="#FFFFFF" stroke="#D8DDEA" stroke-width="1.5"/>
+<text x="340.0" y="877" class="nt" fill="#15171F">Новые страницы под спрос</text>
+<text x="340.0" y="899" class="nb">Сервисы из Search Console плюс</text>
+<text x="340.0" y="914" class="nb">расширение раздела «где платить»</text>
+<rect x="630.0" y="850" width="283.0" height="82" rx="12" fill="#FFFFFF" stroke="#D8DDEA" stroke-width="1.5"/>
+<text x="643.0" y="877" class="nt" fill="#15171F">Страницы сравнения</text>
+<text x="643.0" y="899" class="nb">«Через что платить» ищут раньше, чем</text>
+<text x="643.0" y="914" class="nb">«купить карту»</text>
+<rect x="933.0" y="850" width="283.0" height="82" rx="12" fill="#FFFFFF" stroke="#D8DDEA" stroke-width="1.5"/>
+<text x="946.0" y="877" class="nt" fill="#15171F">Внешние размещения</text>
+<text x="946.0" y="899" class="nb">2ГИС, профильные каталоги, отзывы.</text>
+<text x="946.0" y="914" class="nb">Ссылочного веса они не дают</text>
+</svg></div>
+  <div class="legend">
+    <span><i style="background:#E6F5EE;border:1px solid #9FD3BB"></i>сделано</span>
+    <span><i style="background:#FFFFFF;border:1px solid #D8DDEA"></i>делаем мы</span>
+    <span><i style="background:#F3EDFF;border:1px solid #D3BEF5"></i>разработка</span>
+    <span><i style="background:#FBF0E0;border:1px solid #EBC98F"></i>ждём клиента</span>
+    <span><i style="background:#EEEDFF;border:1px solid #B9B7FF"></i>результат</span>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Главное правило этой схемы</h2>
+  <div class="grid3">
+    <div class="box blue"><span class="tag">дорожка 1</span><h3>Никогда не простаивает</h3><p>Пакеты правок по страницам, разведение пар, заголовки, карта переходов. Ничего из этого не зависит ни от Александра, ни от клиента. Если обе другие дорожки встали, мы всё равно работаем.</p></div>
+    <div class="box"><span class="tag">дорожка 2</span><h3>Отдаём партиями, не поштучно</h3><p>Четыре партии вместо двадцати сообщений. Так Александр не переделывает по десять раз, а мы не теряем время на согласования.</p></div>
+    <div class="box amber"><span class="tag">дорожка 3</span><h3>Ждём, но не стоим</h3><p>Каждый ответ клиента открывает свой кусок работы. Пока ответов нет, эти куски просто ждут, а мы идём по первой дорожке.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Что меряем на выходе</h2>
+  <p class="sub">Две точки, обе с датой и стартовым значением.</p>
+  <div class="grid2">
+    <div class="box blue"><span class="tag">через 2-4 недели после партии 1</span><h3>Индекс</h3><p>Сейчас 2 350 страниц в индексе при 985 в карте, 255 отброшены как копии. Ждём около тысячи.</p></div>
+    <div class="box blue"><span class="tag">31 октября</span><h3>Позиции</h3><p>Пятнадцать страниц сейчас на позициях от 23 до 78. Цель уйти в диапазон 20-30 по тем, что правим первыми.</p></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+<p><b>Откуда цифры.</b> Замеры сняты 28 и 29 сентября 2026 своими скриптами и из Search Console. Правила поисковых систем сверены с первоисточниками в те же дни.</p>
+<p>Полный список работ лежит в документе «Общий план работ по SEO», 13 блоков и 105 пунктов.</p>
+</div></footer>
+</body>
+</html>
